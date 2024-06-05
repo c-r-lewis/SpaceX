@@ -1,0 +1,74 @@
+body {
+    background: linear-gradient(90deg, #0a042a 0%, #0f0a38 50%, #0a042a 100%);
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: white;
+    border-radius: 50%;
+    animation: twinkle var(--duration) infinite var(--delay) ease-in-out;
+    transition: opacity 0.5s;
+    z-index: -1;
+}
+
+
+.next {
+    flex-wrap: wrap;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    background: linear-gradient(90deg, #0a042a 0%, #0f0a38 50%, #0a042a 100%);
+}
+
+.countdown-number, h1 {
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+    margin: 0 10px;
+
+}
+
+.countdown-number {
+    animation: glow 2s infinite ease-in-out;
+    text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white, 0 0 40px white;
+}
+.countdown-label {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 10px white;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white, 0 0 40px white;
+    }
+    50% {
+        text-shadow: 0 0 20px white, 0 0 30px white, 0 0 40px white, 0 0 50px white;
+    }
+    100% {
+        text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white, 0 0 40px white;
+    }
+}
+
+@keyframes twinkle {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+        box-shadow: 0 0 10px white;
+    }
+
+    100% {
+        opacity: 0;
+        box-shadow: 0 0 0 white;
+    }
+}
